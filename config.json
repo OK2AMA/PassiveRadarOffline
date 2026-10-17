@@ -1,0 +1,39 @@
+{
+  "dataset": {
+    "dir": "IQ",
+    "channel_a_file": "Ch1_Fc514MHz_Fs3MHz_DVBT",
+    "channel_b_file": "Ch2_Fc514MHz_Fs3MHz_DVBT",
+    "fs_hz": 3000000,
+    "fc_hz": 514000000.0,
+    "cpi_seconds": 1.0,
+    "offset_samples": 0
+  },
+  "phased_array": {
+    "phase_offset_deg": 0.0,
+    "reference_source": "SUM",
+    "surveillance_source": "B"
+  },
+  "processing": {
+    "max_range_km": 50.0,
+    "max_doppler_hz": 500.0,
+    "doppler_bins": 512,
+    "autocorr_max_lag_samples": 500,
+    "clutter_cancellation": {
+      "enabled": true,
+      "algorithm": "ECA-B",
+      "filter_taps": 40
+    }
+  },
+  "cfar": {
+    "enabled": true,
+    "guard_cells": [2, 4],
+    "ref_cells": [8, 16],
+    "snr_threshold_db": 12.0,
+    "exclude_zero_doppler_hz": 15.0
+  },
+  "visualization": {
+    "save_plots": true,
+    "output_dir": "output_plots",
+    "show_plots": false
+  }
+}
